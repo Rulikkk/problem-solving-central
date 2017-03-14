@@ -1,7 +1,5 @@
         public int Go(int[] initarr, int target)
         {
-            List<long> list = new List<long>();
-
             int min = 0;
             int max = initarr.Length-1;
             int mid = 0;

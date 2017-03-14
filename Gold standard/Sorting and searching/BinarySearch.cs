@@ -1,4 +1,7 @@
-       // Problem: Given sorted array and X, please find the position of X in the array
+       /* Problem: Given sorted array and X, please find the position of X in the array
+          Solution: Binary Search
+          Lang: C#
+       */
        public int Go(int[] initarr, int target)
         {
             int min = 0;

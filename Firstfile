@@ -13,7 +13,7 @@
             }
             while (min<=max)
             {
-                mid = low + ((high - low) / 2);
+                mid = min + ((max - min) / 2);
                 if (target > initarr[mid])
                 {
                     min=mid+1;

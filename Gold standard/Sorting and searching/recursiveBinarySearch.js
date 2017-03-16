@@ -1,8 +1,8 @@
 /**
  * Binary search for item in an array. Returns index of some (not necessarily first) item.
  * @param {Number} num - Number to search.
- * @param {Number?} start - Start index to search. Optional.
- * @param {Number?} end - End index to search. Optional.
+ * @param {Number} [start] - Start index to search. Optional.
+ * @param {Number} [end] - End index to search. Optional.
  * @returns {Number} Index of item if found, `-1` otherwise.
  */
 Array.prototype.recursiveBinarySearch = function(num, start, end) {

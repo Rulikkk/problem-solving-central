@@ -21,7 +21,7 @@ const MIN_INT_NUMBER = 0, MAX_INT_NUMBER = 10, ARRAY_LENGTH = 10;
 
 function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
-}
+};
 
 function createSortedIntNumbersArrayByLength(length) {
   let array = [], index = 0;
@@ -32,7 +32,7 @@ function createSortedIntNumbersArrayByLength(length) {
   }
 
   return array.sort();
-}
+};
 
 function main() {
   let arr = createSortedIntNumbersArrayByLength(ARRAY_LENGTH),
@@ -40,5 +40,4 @@ function main() {
     i = arr.recursiveBinarySearch(num);
 
   console.log((i === -1 && arr.indexOf(num) === -1) || num === arr[i]);
-}
-
+};

@@ -34,7 +34,7 @@ function createSortedIntNumbersArrayByLength(length) {
     i++;
   }
 
-  return array.sort();
+  return array.sort((a,b)=>a-b);
 };
 
 function main() {

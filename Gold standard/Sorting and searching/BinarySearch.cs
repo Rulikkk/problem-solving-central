@@ -3,7 +3,7 @@
           Lang: C#
        */
 
-       public static int BinarySerch(int[] array, int target)
+       private static int BinarySerch(int[] array, int target)
         {
             int start = 0;
             int end = array.Length-1;

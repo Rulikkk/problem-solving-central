@@ -2,34 +2,50 @@
           Solution: Binary Search
           Lang: C#
        */
-       public int Go(int[] initarr, int target)
+
+       private static int BinarySerch(int[] array, int target)
         {
-            int min = 0;
-            int max = initarr.Length-1;
-            int mid = 0;
-            if (initarr[min] == target)
+            int start = 0;
+            int end = array.Length-1;
+            int middle;
+            while (start<=end)
             {
-                return min;
-            }
-            if (initarr[max] == target)
-            {
-                return max;
-            }
-            while (min<=max)
-            {
-                mid = min + ((max - min) / 2);
-                if (target > initarr[mid])
+                middle = start + (end - start) / 2;
+                if (target > array[middle])
                 {
-                    min=mid+1;
+                    start  =middle + 1;
                 }
-                else if (target < initarr[mid])
+                else if (target < array[middle])
                 {
-                    max = mid - 1;
+                    end = middle - 1;
                 }
                 else
                 {
-                    return mid;
+                    return middle;
                 }
             }
             return -1;
         }
+
+        private static int[] GetRundomArray()
+        {
+           int[] array = new int[1000];
+           Random rnd = new Random();
+           for (int i=0;i<array.Length;i++)
+           {
+               array[i]= rnd.Next();
+           }
+           Array.Sort(array);
+           return array;
+        }
+
+        // Entry point
+        public static void Main(string[] args)
+        {
+             int[] array = GetRundomArray();
+             int target = 984684;
+             int targetIndex = BinarySerch(array, target);
+             Console.WriteLine(targetIndex==-1?"Target item's index not found":targetIndex.ToString());
+        }
+
+
